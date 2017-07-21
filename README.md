@@ -75,7 +75,19 @@ SafariViewController.isAvailable(function (available) {
                         })
 ```
 
-Note: Apple has announced a change in the behavior of Safari View Controller with iOS 11 that stored data (cookies, local storage, etc.) will no longer be shared between instances of Safari View Controller. Above code can be modified to include furter check for IOS versions and hence fallback to system browsers
+Note: Apple has announced a change in the behavior of Safari View Controller with iOS 11 that stored data (cookies, local storage, etc.) will no longer be shared between instances of Safari View Controller. 
+Also reivew the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/):
+
+  > SafariViewContoller must be used to visibly present information to users; the controller may not be hidden or obscured by other views or layers. Additionally, an app may not use SafariViewController to track users without their knowledge and consent.
+
+- since iOS 10, SafariViewController doesn't seem to load at all when alpha is set to 0
+
+Possible alternatives:
+- Modify above code to include furter check for IOS versions and hence fallback to system browsers.
+
+- [Shared Web Credentials](https://developer.apple.com/documentation/security/shared_web_credentials) (if the user uses iCloud Keychain) [Cordova Plugin](https://github.com/ionic-team/cordova-plugin-ios-keychain)
+
+
 
 
  
