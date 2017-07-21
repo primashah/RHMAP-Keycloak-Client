@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/pshah/redhat_projects/nonb/KC_EXP_3/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="release"><source path="/Users/pshah/redhat_projects/nonb/KC_EXP_3/platforms/android/CordovaLib/src/release/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/pshah/redhat_projects/GITHUB_MYREPO/RHMAP_Keycloak_Cordova_Client/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="release"><source path="/Users/pshah/redhat_projects/GITHUB_MYREPO/RHMAP_Keycloak_Cordova_Client/platforms/android/CordovaLib/src/release/shaders"/></dataSet></merger>

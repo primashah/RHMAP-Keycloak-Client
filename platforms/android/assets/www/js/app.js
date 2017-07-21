@@ -1,16 +1,14 @@
 window.keycloakAuth = null;
 document.addEventListener('deviceready', onDeviceReady, false);
+document.addEventListener('resume', onAppResume, false);
 
 
 
-function onPause() {
-    alert("pause");
-}
 
 function onAppResume() {
-  alert("resme");
+  
   //Checks whether user is already logged in .
-  //Note :On Android , closing chrome custom tabs fires resume event and hence it results in ifinite loop
+  //Note :On Android , closing chrome custom tabs fires resume event and hence  results in ifinite loop
   if (cordova.platformId === "ios") {
     keycloakAuth.init({
       onLoad: 'check-sso'
@@ -20,32 +18,31 @@ function onAppResume() {
 }
 
 function onDeviceReady() {
-  document.addEventListener('resume', onAppResume, false);
-
-document.addEventListener("pause", onPause, false);
+ 
 
   window.handleOpenURL = function (url) {
+    //Parse response from Kyecloak.
     SafariViewController.hide();
     keycloakAuth.handleCustomURICallback(url);
   };
   //Initialize keycloak
   keycloakAuth = new Keycloak({
-    "realm": "SSO_POC",
-    "redirect-ui": "ssoapp1://callback",
-    "auth-server-url": "https://keycloak-osdprim.rhcloud.com/auth",
-    "url": "https://keycloak-osdprim.rhcloud.com/auth",
-    "ssl-required": "none",
-    "resource": "app1",
+    "realm": "<<Keycloak Realm name>>",
+    "redirect-ui": "<<Redirect uri set through Admin Console for a Mobile Client>>", //eg. : "ssoapp1://callback"
+    "auth-server-url": "https://<<Keycloak host >>/auth",
+    "url": "https://<<Keycloak host >>/auth",
+    "ssl-required": "none", //testing purpose
+    "resource": "<<Client Id set througgh Admin Console for a Mobile Client>>",
     "credentials": {
-      "secret": "c226b55e-1036-4a6e-9b99-da7cd3165709"
+      "secret": "<<Secret for a Mobile Client>>"
     },
-    "clientId": "app1"
+    "clientId": "<<Client Id set througgh Admin Console for a Mobile Client>>",
   });
 
 
   keycloakAuth.onAuthLogout = function () {
     document.getElementById("spinner").style.display = "none"
-    // document.getElementById("cloudAPI").style.display="none";
+    
     document.getElementById("logout").style.display = "none";
     document.getElementById("login").style.display = "block";
     document.getElementById("description").innerHTML = "You are logged out. Please login again."
@@ -60,7 +57,7 @@ document.addEventListener("pause", onPause, false);
     document.getElementById("description").innerHTML = "User is logged in succesfully"
   };
   keycloakAuth.onAuthError = function (errorData) {
-    //document.getElementById("cloudAPI").style.display="none";
+    
     document.getElementById("spinner").style.display = "none"
     document.getElementById("description").innerHTML = "You are not logged in."
     document.getElementById("logout").style.display = "none";
@@ -70,7 +67,7 @@ document.addEventListener("pause", onPause, false);
 
   keycloakAuth.init({
     onLoad: 'login-required'
-  }).success(function () {}).error(function (e) {});
+  });
 
 
 

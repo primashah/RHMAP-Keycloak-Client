@@ -982,11 +982,11 @@
                                     },
                                     function (result, b) {
                                         if (result.event === 'opened') {
-                                            // alert('opened' + JSON.stringify(result));
+                                             console.log('opened' + JSON.stringify(result));
                                         } else if (result.event === 'loaded') {
-                                            // alert('loaded' + JSON.stringify(result));
+                                            console.log('loaded' + JSON.stringify(result));
                                         } else if (result.event === 'closed') {
-                                            // alert('closed' + JSON.stringify(result));
+                                            console.log('closed' + JSON.stringify(result));
                                         }
                                     },
                                     function (msg) {
@@ -1025,11 +1025,11 @@
                                     },
                                     function (result, b) {
                                         if (result.event === 'opened') {
-                                            // alert('loaded opened' + JSON.stringify(result));
+                                              console.log('loaded opened' + JSON.stringify(result));
                                         } else if (result.event === 'loaded') {
-                                            // alert('loaded logout' + JSON.stringify(result));
+                                              console.log('loaded logout' + JSON.stringify(result));
                                         } else if (result.event === 'closed') {
-                                            //alert('loaded closed' + JSON.stringify(result));
+                                              console.log('loaded closed' + JSON.stringify(result));
                                         }
                                     },
                                     function (msg) {
@@ -1059,11 +1059,11 @@
                                     },
                                     function (result, b) {
                                         if (result.event === 'opened') {
-                                            // alert('loaded opened' + JSON.stringify(result));
+                                              console.log('loaded opened' + JSON.stringify(result));
                                         } else if (result.event === 'loaded') {
-                                            // alert('loaded logout' + JSON.stringify(result));
+                                              console.log('loaded logout' + JSON.stringify(result));
                                         } else if (result.event === 'closed') {
-                                            //alert('loaded closed' + JSON.stringify(result));
+                                              console.log('loaded closed' + JSON.stringify(result));
                                         }
                                     },
                                     function (msg) {
@@ -1093,11 +1093,11 @@
                                     },
                                     function (result, b) {
                                         if (result.event === 'opened') {
-                                            // alert('loaded opened' + JSON.stringify(result));
+                                              console.log('loaded opened' + JSON.stringify(result));
                                         } else if (result.event === 'loaded') {
-                                            // alert('loaded logout' + JSON.stringify(result));
+                                              console.log('loaded logout' + JSON.stringify(result));
                                         } else if (result.event === 'closed') {
-                                            //alert('loaded closed' + JSON.stringify(result));
+                                              console.log('loaded closed' + JSON.stringify(result));
                                         }
                                     },
                                     function (msg) {

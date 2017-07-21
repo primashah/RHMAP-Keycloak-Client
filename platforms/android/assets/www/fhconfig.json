@@ -1,17 +1,9 @@
 {
-  "android": {
-    "senderID": "662340060079",
-    "variantID": "4aa41016-0bf6-40b7-b4d5-28b11bfdd65f",
-    "variantSecret": "69ce2459-06c2-408e-b651-02094020cc44"
-  },
-  "appid": "s2felvboyxo7phghqgfvs523",
-  "appkey": "514b035daa915865462613957aa3ac4da867c92b",
-  "apptitle": "Push Hybrid App",
-  "connectiontag": "0.0.18",
-  "host": "https://psdev.us.evals.redhatmobile.com",
-  "ios": {
-    "variantID": "4a4271fd-45eb-4d18-a908-96718d35deae",
-    "variantSecret": "4f66519d-5cbb-44c5-9a18-4541b2709fc3"
-  },
-  "projectid": "s2felvdgy2yy5blvwo7c5z3z"
+  
+  "appid": "",
+  "appkey": "",
+  "apptitle": "",
+  "connectiontag": "",
+  "host": "",
+  "projectid": ""
 }

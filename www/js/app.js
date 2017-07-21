@@ -21,6 +21,7 @@ function onDeviceReady() {
  
 
   window.handleOpenURL = function (url) {
+    //Parse response from Kyecloak.
     SafariViewController.hide();
     keycloakAuth.handleCustomURICallback(url);
   };
@@ -41,7 +42,7 @@ function onDeviceReady() {
 
   keycloakAuth.onAuthLogout = function () {
     document.getElementById("spinner").style.display = "none"
-    // document.getElementById("cloudAPI").style.display="none";
+    
     document.getElementById("logout").style.display = "none";
     document.getElementById("login").style.display = "block";
     document.getElementById("description").innerHTML = "You are logged out. Please login again."
@@ -56,7 +57,7 @@ function onDeviceReady() {
     document.getElementById("description").innerHTML = "User is logged in succesfully"
   };
   keycloakAuth.onAuthError = function (errorData) {
-    //document.getElementById("cloudAPI").style.display="none";
+    
     document.getElementById("spinner").style.display = "none"
     document.getElementById("description").innerHTML = "You are not logged in."
     document.getElementById("logout").style.display = "none";
@@ -66,7 +67,7 @@ function onDeviceReady() {
 
   keycloakAuth.init({
     onLoad: 'login-required'
-  }).success(function () {}).error(function (e) {});
+  });
 
 
 
