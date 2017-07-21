@@ -19,7 +19,7 @@ The application uses a modified version of Keycloak Javascript Adapter. The adap
 
 
 
-This application also shows how you can use cloud call with the RHMAP platform and Keycloak token, it should be used in combination with the [HelloWorld cloud app](https://github.com/feedhenry-templates/helloworld-cloud). Refer to `www/fhconfig.json` for configuration.
+This application also shows how you can use cloud call with the RHMAP platform and Keycloak token, it can be used in combination with the [HelloWorld cloud app](https://github.com/primashah/RHMAP-Keycloak-Cloud). 
 
 If you do not have access to a RHMAP instance, you can sign up for a free instance at [https://openshift.feedhenry.com/](https://openshift.feedhenry.com/).
 
